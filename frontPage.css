@@ -1,0 +1,1877 @@
+@font-face {
+    font-family: League Spartan;
+    src: url(LeagueSpartan-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.backGround {
+    background-color: rgb(201, 237, 247);
+    width: 1280px;
+    height: 720px;
+    position: fixed;
+}
+
+#backG2 {
+    background-color: white;
+    width: 1088px;
+    height: 612px;
+    position: fixed;
+    top: 57px;
+    left: 96px;
+}
+
+#title {
+    font-family: Chewy;
+    font-size: 180px;
+    color: rgb(21, 108, 153);
+    position: fixed;
+    left: 280px;
+    top: 210px;
+}
+
+#titleDisc {
+    font-size: 30px;
+    font-family: League Spartan;
+    font-weight: 1000;
+    color: rgb(84, 84, 84);
+    position: fixed;
+    left: 450px;
+    top: 410px;
+}
+
+#playButton {
+    position: fixed;
+    top: 490px;
+    left: 180px;
+    width: 300px;
+    height: 175px;
+    background-image: url("PlayBackground1\ \(1\).png");
+    background-size: cover;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: chewy;
+    font-size: 70px;
+    color: bisque;
+    cursor: pointer;
+}
+
+.bHover {
+    transition: transform 0.4s ease;
+}
+
+.bHover:hover {
+    transition: transform 0.4s ease;
+    transform: scale(1.1);
+}
+
+#exitButton {
+    position: fixed;
+    top: 490px;
+    left: 530px;
+    width: 290px;
+    height: 170px;
+    background-image: url("Exit1\ \(1\).png");
+    background-size: cover;
+    border: 0;
+    background-color: #ffffff00;
+    font-family: chewy;
+    font-size: 70px;
+    color: bisque;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+#pencil {
+    position: fixed;
+    top: 340px;
+    left: 890px;
+}
+
+#star {
+    position: fixed;
+    top: 150px;
+    left: 1000px;
+}
+
+#tape {
+    position: fixed;
+    top: 00px;
+    left: 50px;
+}
+
+#tape2 {
+    position: fixed;
+    top: 580px;
+    left: 850px;
+}
+
+#cover {
+    position: fixed;
+    top: 0;
+    left: 1280px;
+    background-color: white;
+    width: 1920px;
+    height: 1080px;
+}
+
+#cover2 {
+    position: fixed;
+    top: 720px;
+    left: 0px;
+    background-color: white;
+    width: 1920px;
+    height: 1080px;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveOut {
+    0% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(-800px);
+        opacity: 0;
+    }
+}
+
+@keyframes moveIn {
+    0% {
+        transform: translateX(-800px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX();
+    }
+}
+
+@keyframes moveAndRotatePencilOut {
+    0% {
+        transform: translateX(0px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(calc(100vw - 200px)) rotate(90deg);
+    }
+}
+
+@keyframes moveAndRotatePencilIn {
+    0% {
+        transform: translateX(calc(100vw - 200px)) rotate(90deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX() rotate(0deg);
+    }
+}
+
+@keyframes liftbOut {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+}
+
+@keyframes liftbIn {
+    0% {
+        transform: translateY(80px) scaleY(1);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    80% {
+        transform: scaleY(.9);
+    }
+
+    100% {
+        transform: translateY() scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes move2Out {
+    0% {
+        transform: translateX(0px)
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(1280px);
+        opacity: 0;
+    }
+}
+
+@keyframes move2In {
+    0% {
+        transform: translateX(-700px);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX();
+    }
+}
+
+@keyframes popBounceOut {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+
+    20% {
+        transform: scale(1.25);
+    }
+
+    60% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes popBounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    20% { 
+        opacity: 1;
+    }
+
+    40% {
+        transform: scale(1.25);
+    }
+
+    60% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleOut {
+    0% {
+        scale: 1;
+        opacity: 1;
+    }
+
+    100% {
+        scale: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes rightOut {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(430px);
+        opacity: 0;
+    }
+}
+
+@keyframes rightIn {
+    0% {
+        transform: translateX(-600px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX();
+        opacity: 1;
+    }
+}
+
+
+/* content of menupage */
+
+
+.font {
+    font-family: League Spartan;
+    font-size: 50px;
+    color: #545454;
+}
+
+#direct {
+    font-family: Chewy;
+    margin: 0;
+    justify-self: center;
+    font-size:80px;
+    color:rgb(21,108,153);
+    position: fixed;
+    left: 600px;
+    top: 132px;
+    text-shadow: 5px 5px rgb(185, 185, 185);
+}
+
+#sun {
+    position: fixed;
+    top: 32px;
+    left: 350px;
+}
+
+#cloud {
+    position: fixed;
+    top: 22px;
+    left: 450px;
+}
+
+.backButton {
+    background-image: url(backBg\ \(1\).png);
+    width: 253px;
+    height: 250px;
+    background-size: cover;
+    border: 0;
+    margin: 0;
+    position: fixed;
+    top: -70px;
+    left: -50px;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: Chewy;
+    font-size: 100px;
+    color: white;
+    text-shadow: 5px 5px rgb(129, 129, 129);
+    padding-top: 20px;
+    padding-left: 20px;
+    font-weight:900;
+    cursor: pointer; 
+}
+
+#No1 {
+    background-image: url(option\ \(1\).png);
+    width: 180px;
+    height: 170px;
+    background-size: cover;
+    background-color: rgba(245, 245, 220, 0);
+    border: 0;
+    position: fixed;
+    left: 186px;
+    top: 300px;
+    font-family: League Spartan;
+    font-size: 110px;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+    font-weight: 600;
+    text-shadow: 5px 5px rgb(106, 106, 106);
+    cursor: pointer;
+}
+
+#No2 {
+    background-image: url(option\ \(1\).png);
+    width: 180px;
+    height: 170px;
+    background-size: cover;
+    background-color: rgba(245, 245, 220, 0);
+    border: 0;
+    position: fixed;
+    left: 424px;
+    top: 300px;
+    font-family: League Spartan;
+    font-size: 110px;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+    font-weight: 600;
+    text-shadow: 5px 5px rgb(106, 106, 106);
+    cursor: pointer;
+}
+
+#No3 {
+    background-image: url(option\ \(1\).png);
+    width: 180px;
+    height: 170px;
+    background-size: cover;
+    background-color: rgba(245, 245, 220, 0);
+    border: 0;
+    position: fixed;
+    left: 662px;
+    top: 300px;
+    font-family: League Spartan;
+    font-size: 110px;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+    font-weight: 600;
+    text-shadow: 5px 5px rgb(106, 106, 106);
+    cursor: pointer;
+}
+
+#No4 {
+    background-image: url(option\ \(1\).png);
+    width: 180px;
+    height: 170px;
+    background-size: cover;
+    background-color: rgba(245, 245, 220, 0);
+    border: 0;
+    position: fixed;
+    left: 900px;
+    top: 300px;
+    font-family: League Spartan;
+    font-size: 110px;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+    font-weight: 600;
+    text-shadow: 5px 5px rgb(106, 106, 106);
+    cursor: pointer;
+}
+
+#No5 {
+    background-image: url(option\ \(1\).png);
+    width: 180px;
+    height: 170px;
+    background-size: cover;
+    background-color: rgba(245, 245, 220, 0);
+    border: 0;
+    position: fixed;
+    left: 186px;
+    top: 500px;
+    font-family: League Spartan;
+    font-size: 110px;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+    font-weight: 600;
+    text-shadow: 5px 5px rgb(106, 106, 106);
+    cursor: pointer;
+}
+
+#No6 {
+    background-image: url(option\ \(1\).png);
+    width: 180px;
+    height: 170px;
+    background-size: cover;
+    background-color: rgba(245, 245, 220, 0);
+    border: 0;
+    position: fixed;
+    left: 424px;
+    top: 500px;
+    font-family: League Spartan;
+    font-size: 110px;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+    font-weight: 600;
+    text-shadow: 5px 5px rgb(106, 106, 106);
+    cursor: pointer;
+}
+
+#No7 {
+    background-image: url(option\ \(1\).png);
+    width: 180px;
+    height: 170px;
+    background-size: cover;
+    background-color: rgba(245, 245, 220, 0);
+    border: 0;
+    position: fixed;
+    left: 662px;
+    top: 500px;
+    font-family: League Spartan;
+    font-size: 110px;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+    font-weight: 600;
+    text-shadow: 5px 5px rgb(106, 106, 106);
+    cursor: pointer;
+}
+
+#No8 {
+    background-image: url(option\ \(1\).png);
+    width: 180px;
+    height: 170px;
+    background-size: cover;
+    background-color: rgba(245, 245, 220, 0);
+    border: 0;
+    position: fixed;
+    left: 900px;
+    top: 500px;
+    font-family: League Spartan;
+    font-size: 110px;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+    font-weight: 600;
+    text-shadow: 5px 5px rgb(106, 106, 106);
+    cursor: pointer;
+}
+
+#cover {
+    position: fixed;
+    top: 0;
+    left: 1280px;
+    background-color: white;
+    width: 1920px;
+    height: 1080px;
+}
+
+#cover2 {
+    position: fixed;
+    top: 720px;
+    left: 0px;
+    background-color: white;
+    width: 1920px;
+    height: 1080px;
+}
+
+@keyframes bulgeIn {
+    0% {
+        transform: translateX(-150px) translateY(-150px);
+    }
+
+    60% {
+        transform: translateX(20px) translateY(20px);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes bulgeOut {
+    0% {
+        transform: translateX() translateY();
+    }
+
+    60% {
+        transform: translateX(20px) translateY(20px);
+    }
+
+    100% {
+        transform: translateX(-150px) translateY(-150px);
+    }
+}
+
+@keyframes popBounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    20% { 
+        opacity: 1;
+    }
+
+    40% {
+        transform: scale(1.15);
+    }
+
+    60% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes popBounceOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    20% { 
+        opacity: 1;
+    }
+
+    40% {
+        transform: scale(1.15);
+    }
+
+    60% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(.8);
+        opacity: 0;
+    }
+}
+
+@keyframes moveRotateCloudIn {
+    0% {
+        transform: translateX(calc(100vw - 200px)) rotate(270deg);
+    }
+    100% {
+        transform: translateX() rotate(360deg); 
+    }
+}
+
+@keyframes moveRotateCloudOut {
+    0% {
+        transform: translateX() rotate(360deg);
+    }
+    100% {
+        transform: translateX(calc(100vw - 200px)) rotate(270deg);
+    }
+}
+
+@keyframes moveRotateSunIn {
+    0% {
+        transform: translateY(-600px) rotate(-90deg);
+    }
+    100% {
+        transform: translateY() rotate(0deg);
+    }
+}
+
+@keyframes moveRotateSunOut {
+    0% {
+        transform: translateY() rotate();
+    }
+    100% {
+        transform: translateY(-600px) rotate(-90deg);
+    }
+}
+
+@keyframes moveRotateOptIn {
+    0% {
+        transform: translateX(-600px) rotate(90deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX() rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes moveRotateOptOut {
+    0% {
+        transform: translateX() rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-600px) rotate(90deg);
+        opacity: 0;
+    }
+}
+
+@keyframes moveRotateOptNextIn {
+    0% {
+        transform: translateX(600px) rotate(-90deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX() rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes moveRotateOptNextOut {
+    0% {
+        transform: translateX() rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(600px) rotate(-90deg);
+        opacity: 0;
+    }
+}
+
+@keyframes choose {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+/* this is the end of menupage */
+/* this the begin of puzzle 1 */
+
+#no1backg {
+    position: fixed;
+    left: 60px;
+}
+
+#submit {
+    background-image: url(submit\ \(1\).png);
+    background-size: cover;
+    width: 250px;
+    height: 149px;
+    position: fixed;
+    top: 550px;
+    left: 150px;
+    border: 0;
+    background-color: rgba(0, 255, 255, 0);
+    color: white;
+    font-family: Chewy;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#puzzle {
+    width: 430px;
+    background-size: cover;
+    position: fixed;
+    left: 800px;
+    top: 150px;
+}
+
+#no1tape {
+    width: 200px;
+    background-size: cover;
+    position: fixed;
+    top: 100px;
+    left: 1000px;
+}
+
+#no1star {
+    width: 300px;
+    background-size: cover;
+    position: fixed;
+    top: 100px;
+    left: 600px;
+}
+
+#no1tape2 {
+    width: 300px;
+    position: fixed;
+    top: 450px;
+    left: 730px;
+}
+
+#no1pencil {
+    width: 400px;
+    position: fixed;
+    top: 320px;
+    left: 1020px;
+    transform: rotate(-10deg);
+}
+
+#timerBg {
+    width: 400px;
+    position: fixed;
+    top: 5px;
+    left: 480px;
+}
+
+#qs {
+    position: fixed;
+    top: 170px;
+    left: 190px;
+}
+
+#one {
+    font-family: Chewy;
+    font-size: 100px;
+    position: fixed;
+    top: 145px;
+    left: 120px;
+    color: rgb(21, 108, 153);
+}
+
+#option1 {
+    position: fixed;
+    top: 370px;
+    left: 230px;
+}
+
+#ab {
+    position: fixed;
+    top: 345px;
+    left: 160px;
+}
+
+#option2 {
+    position: fixed;
+    top: 370px;
+    left: 530px;
+}
+
+#bb {
+    position: fixed;
+    top: 345px;
+    left: 460px;
+}
+
+#option3 {
+    position: fixed;
+    top: 470px;
+    left: 230px;
+}
+
+#cb {
+    position: fixed;
+    top: 445px;
+    left: 160px;
+}
+
+#option4 {
+    position: fixed;
+    top: 470px;
+    left: 530px;
+}
+
+#db {
+    position: fixed;
+    top: 445px;
+    left: 460px;
+}
+
+.bulb-radio input[type="radio"] {
+    display: none;
+}
+
+.bulb-radio label {
+    cursor: pointer;
+    background-image: url(bulb1\(1\).png);
+    /* Default to bulb1.png */
+    background-size: cover;
+    width: 60px;
+    height: 75px;
+    display: inline-block;
+    transition: opacity .5s ease-in-out, background-image .5s ease-in-out;
+    /* Smooth transition for opacity and background image */
+    opacity: 1;
+    /* Default opacity - dimmed for off state */
+}
+
+.bulb-radio input[type="radio"]:checked+label {
+    background-image: url(bulb2\(1\).png);
+    /* Switch to bulb2.png when checked */
+    opacity: 1;
+    /* Fully visible - bright for on state */
+}
+
+#time {
+    font-family: League Spartan;
+    font-size: 50px;
+    position: fixed;
+    top: 68px;
+    left: 520px;
+    color: #545454;
+}
+
+@keyframes puzzleIn {
+    0% {
+        transform: translateX(600px) rotate(-90deg);
+    }
+
+    100% {
+        transform: translateX() rotate(0deg);
+    }
+}
+
+@keyframes puzzleOut {
+    0% {
+        transform: translateX() rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(600px) rotate(-90deg);
+    }
+}
+
+@keyframes timeIn {
+    0% {
+        transform: translateY(-100px) scaleY(0);
+    }
+    
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+}
+
+@keyframes timeOut {
+    0% {
+        transform: translateY(0) scaleY(1);
+    }
+
+    100% {
+        transform: translateY(-100px) scaleY(0);
+    }
+}
+
+@keyframes submitOut {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(170px);
+    }
+}
+
+@keyframes submitIn {
+    0% {
+        transform: translateY(150px) scaleY(1);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    80% {
+        transform: scaleY(.9);
+    }
+
+    100% {
+        transform: translateY() scaleY(1);
+    }
+}
+
+@keyframes tapeIn {
+    0% {
+        transform: scale(5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes tapeOut {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
+@keyframes tape2In {
+    0% {
+        transform: translateY(300px);
+    }
+
+    100% {
+        transform: translateY();
+    }
+}
+
+@keyframes tape2Out {
+    0% {
+        transform: translateY();
+    }
+
+    100% {
+        transform: translateY(300px);
+    }
+}
+
+@keyframes pencilIn {
+    0% {
+        transform: translateX(calc(100vw - 200px)) rotate(90deg);
+    }
+
+    100% {
+        transform: translateX() rotate(0deg);
+    }
+}
+
+@keyframes pencilOut {
+    0% {
+        transform: translateX() rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(calc(100vw - 200px)) rotate(90deg);
+    }
+}
+
+@keyframes starIn {
+    0% {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes starOut {
+    0% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* this is the end of menu and first puzzle ====================================================================================*/
+/* this is the begin of thank you page =========================================================================================*/
+
+#thankbg {
+    width: 800px;
+    position: fixed;
+    left: 222px;
+    top: 142px;
+    animation: tkbgIn .7s ease;
+}
+
+#thyou {
+    font-family: Chewy;
+    font-size: 100px;
+    position: fixed;
+    top: 230px;
+    left: 350px;
+    color:rgb(163,207,151);
+    animation: tktextIn .7s ease-in;
+}
+
+#for {
+    font-family: Chewy;
+    font-size: 50px;
+    position: fixed;
+    top: 380px;
+    left: 350px;
+    color:#cb7460;
+    animation: tktextIn .7s ease-in;
+}
+
+#exit {
+    background-image: url(thankbg\ \(1\).png);
+    background-size: cover;
+    height: 132px;
+    width: 200px;
+    position: fixed;
+    top: 360px;
+    left: 730px;
+    border: 0;
+    background-color: rgba(0, 255, 255, 0);
+    color: white;
+    font-family: Chewy;
+    font-size: 70px;
+    cursor: pointer;
+    animation: tkexitIn .7s ease-in;
+}
+
+#pin {
+    position: fixed;
+    width: 130px;
+    top: 150px;
+    left: 820px;
+    animation: tkpinIn .7s ease;
+}
+
+#tkcloud {
+    position: fixed;
+    width: 500px;
+    top: -80px;
+    left: 860px;
+    animation: tkcloudIn .7s ease;
+}
+
+#bird {
+    position: fixed;
+    width: 600px;
+    top: 500px;
+    left: 681px;
+    animation: tkbirdIn .7s ease;
+}
+
+#heart {
+    position: fixed;
+    width: 350px;
+    top: 30px;
+    left: 42px;
+    animation: tkheartIn .7s ease;
+}
+
+#flower {
+    position: fixed;
+    width: 300px;
+    top: 430px;
+    left: 20px;
+    animation: tkflowerIn .7s ease;
+}
+
+@keyframes tkheartIn {
+    0% {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+}
+
+@keyframes tkheartOut {
+    100% {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+}
+
+@keyframes tkcloudIn {
+    0% {
+        transform: translateY(-300px) translateX(200px);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateY(50px) translateX(-30px);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes tkcloudOut {
+    100% {
+        transform: translateY(-300px) translateX(200px);
+        opacity: 0;
+    }
+
+    40% {
+        transform: translateY(50px) translateX(-30px);
+    }
+
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes tkpinIn {
+    0% {
+        transform: translateY(-300px) translateX(200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes tkpinOut {
+    100% {
+        transform: translateY(-300px) translateX(200px);
+        opacity: 0;
+    }
+
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes tkbgIn {
+    0% {
+        transform: translateY(50px) scale(.8);
+        opacity: 0;
+    }
+}
+
+@keyframes tkbgOut {
+    100% {
+        transform: translateY(50px) scale(.8);
+        opacity: 0;
+    }
+}
+
+@keyframes tkflowerIn {
+    0% {
+        transform: scale(.8);
+        filter: blur(12px);
+        opacity: 0;
+    }
+}
+
+@keyframes tkflowerOut {
+    100% {
+        transform: scale(.8);
+        filter: blur(12px);
+        opacity: 0;
+    }
+}
+
+@keyframes tkbirdIn {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+}
+
+@keyframes tkbirdOut {
+    100% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+}
+
+@keyframes tkexitIn {
+    0% {
+        transform: scale(.9);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes tkexitOut {
+    100% {
+        transform: scale(.9);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.1);
+    }
+
+    0% {
+        transform: scale(1);
+    }
+}
+
+@keyframes tktextIn {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes tktextOut {
+    100% {
+        opacity: 0;
+    }
+}
+
+/* this is the start of well done page ============================================================================== */
+#welDp {
+    font-family: Chewy;
+    font-size: 80px;
+    color: #049a31;
+    position: fixed;
+    top: 340px;
+    left: 420px;
+}
+
+#welDbg {
+    width: 750px;
+    position: fixed;
+    top: 50px;
+    left: 280px;
+}
+
+#okbtn {
+    background-image: url(ok\ \(1\).png);
+    background-size: cover;
+    position: fixed;
+    left: 560px;
+    border: 0;
+    background-color: rgba(240, 248, 255, 0);
+    width: 200px;
+    height: 180px;
+    position: fixed;
+    top: 450px;
+    font-family: Chewy;
+    font-size: 100px;
+    color: white;
+}
+
+#wellD {
+    width: 300px;
+    position: fixed;
+    top: 20px;
+    left: 510px;
+}
+
+@keyframes picIn {
+    0% {
+        filter: blur(25px);
+        opacity: 0;
+    }
+}
+
+@keyframes picOut {
+    100% {
+        filter: blur(25px);
+        opacity: 0;
+    }
+}
+
+@keyframes okIn {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes okOut {
+    100% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes bgIn {
+    0% {
+        transform: scale(.8);
+        opacity: 0;
+    }
+}
+
+@keyframes bgOut {
+    100% {
+        transform: scale(.8);
+        opacity: 0;
+    }
+}
+
+@keyframes textIn {
+    0% {
+        transform: scale(.2);
+        opacity: 0;
+    }
+}
+
+@keyframes textOut {
+    100% {
+        transform: scale(.2);
+        opacity: 0;
+    }
+}
+
+/* this is the end of well done page ============================================================================== */
+/* this is the start of oops page ============================================================================== */
+
+#oopp {
+    font-family: Chewy;
+    font-size: 80px;
+    color: #c92626;
+    position: fixed;
+    top: 320px;
+    left: 420px;
+}
+
+#oops {
+    width: 320px;
+    position: fixed;
+    top: 50px;
+    left: 510px;
+}
+
+/* this is the end of oops page ============================================================================== */
+/* this is the start of no option page ============================================================================== */
+
+#nooptp {
+    font-family: Chewy;
+    font-size: 80px;
+    color: #0072fe;
+    position: fixed;
+    top: 340px;
+    left: 370px;
+}
+
+#nooptcld {
+    width: 300px;
+    position: fixed;
+    top: 50px;
+    left: 530px;
+}
+
+#nooptbtn {
+    background-image: url(ok\ \(1\).png);
+    background-size: cover;
+    position: fixed;
+    left: 560px;
+    border: 0;
+    background-color: rgba(240, 248, 255, 0);
+    width: 200px;
+    height: 180px;
+    position: fixed;
+    top: 450px;
+    font-family: Chewy;
+    font-size: 100px;
+    color: white;
+}
+/* this is the end of no option page ============================================================================== */
+/* this is the start of go back page ============================================================================== */
+
+#gbpaper {
+    position: fixed;
+    height: 790px;
+    left: 185px;
+    top: -30px;
+}
+
+#gbtext {
+    font-family: Chewy;
+    font-size: 80px;
+    color: #156c99;
+    position: fixed;
+    top: 250px;
+    left: 260px;
+}
+
+.gbbutton {
+    width: 200px;
+    height: 180px;
+    position: fixed;
+    top: 400px;
+    font-family: Chewy;
+    font-size: 100px;
+    color: white;
+}
+
+#gbbyes {
+    background-image: url(Yes\ \(1\).png);
+    background-size: cover;
+    position: fixed;
+    left: 700px;
+    border: 0;
+    background-color: rgba(240, 248, 255, 0);
+    cursor: pointer;
+}
+
+#gbbno {
+    background-image: url(No\ \(1\).png);
+    background-size: cover;
+    position: fixed;
+    left: 350px;
+    border: 0;
+    background-color: rgba(240, 248, 255, 0);
+    cursor: pointer;
+}
+
+#gbstar {
+    width: 330px;
+    position: fixed;
+    transform: rotate(0deg);
+    top: 20px;
+}
+
+#gbflower {
+    width: 350px;
+    position: fixed;
+    top: 388px;
+    left: 900px;
+}
+
+@keyframes gbbuttonIn {
+    0% {
+        transform: scale(.6);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gbbuttonOut {
+    100% {
+        transform: scale(.6);
+        opacity: 0;
+    }
+
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gbflowerIn {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes gbflowerOut {
+    100% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes gbtextIn {
+    0% {
+        transform: translateY(100px) scale(.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gbtextOut {
+    100% {
+        transform: translateY(100px) scale(.8);
+        opacity: 0;
+    }
+
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gbpageIn {
+    0% {
+        transform: translateY(200px) scale(.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gbpageOut {
+    100% {
+        transform: translateY(200px) scale(.8);
+        opacity: 0;
+    }
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gbstarIn {
+    0% {
+        transform: translateX(-400px) rotate(-40deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) rotate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes gbstarOut {
+    100% {
+        transform: translateX(-400px) rotate(-40deg);
+        opacity: 0;
+    }
+
+    0% {
+        transform: translateX(0) rotate(0);
+        opacity: 1;
+    }
+}
+
+/* this is the end of go back page ============================================================================== */
+/* this is the start of great work page ============================================================================== */
+
+#gwpaper {
+    position: fixed;
+    top: 54px;
+    left: 140px;
+}
+
+#gwgreat {
+    font-family: Chewy;
+    font-size: 150px;
+    position: fixed;
+    top: 220px;
+    left: 300px;
+    color:rgb(21,108,153);
+}
+
+#gwnextb {
+    background-image: url(nextbg\ \(1\).png);
+    background-size:cover;
+    width: 300px;
+    height: 218px;
+    position: fixed;
+    top: 420px;
+    left: 500px;
+    border: 0;
+    background-color: rgba(0, 255, 255, 0);
+    color: white;
+    font-family: Chewy;
+    font-size: 90px;
+    cursor: pointer
+}
+
+#gwstar {
+    position: fixed;
+    top: 400px;
+    left: 20px;
+}
+
+#gwpin {
+    position: fixed;
+    width: 150px;
+    top: 20px;
+    left: 900px;
+}
+
+#gwsmily {
+    width: 350px;
+    position: fixed;
+    top: 377px;
+    left: 930px;
+}
+
+@keyframes gwsmilyIn {
+    0% {
+        transform: translateX(200px) translateY(300px) scale(.7);
+        opacity: 0;
+    }
+}
+
+@keyframes gwsmilyOut {
+    100% {
+        transform: translateX(200px) translateY(300px) scale(.7);
+        opacity: 0;
+    }
+}
+
+@keyframes gwpopIn {
+    0% {
+        transform: scale(.6);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gwpopOut {
+    100% {
+        transform: scale(.6);
+        opacity: 0;
+    }
+
+    40% {
+        transform: scale(1.1);
+    }
+
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gwpageIn {
+    0% {
+        transform: translateY(600px);
+        opacity: 0;
+    }
+}
+
+@keyframes gwpageOut {
+    100% {
+        transform: translateY(600px);
+        opacity: 0;
+    }
+}
+
+@keyframes gwgreatIn {
+    0% {
+        transform: scale(.5);
+        opacity: 0;
+    }
+}
+
+@keyframes gwgreatOut {
+    100% {
+        transform: scale(.5);
+        opacity: 0;
+    }
+}
+
+@keyframes gwstarIn {
+    0% {
+        transform: translateX(-400px) rotate(-40deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) rotate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes gwstarOut {
+    100% {
+        transform: translateX(-400px) rotate(-40deg);
+        opacity: 0;
+    }
+
+    0% {
+        transform: translateX(0) rotate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes gwpinIn {
+    0% {
+        transform: translateX(200px) translateY(-200px);
+        opacity: 0;
+    }
+}
+ 
+@keyframes gwpinOut {
+    100% {
+        transform: translateX(200px) translateY(-200px);
+        opacity: 0;
+    }
+}
+
+/* this is the end of great work page ============================================================================== */
+
+#countdown {
+    font-family: League Spartan;
+    font-size: 50px;
+    position: fixed;
+    top: 68px;
+    left: 520px;
+    color: #545454;
+}
+
+/* this is the start of time out page ============================================================================== */
+
+#topara {
+    font-family: Chewy;
+    font-size: 80px;
+    color: #c92626;
+    position: fixed;
+    top: 340px;
+    left: 500px;
+}
+
+#tobackbg {
+    width: 750px;
+    position: fixed;
+    top: 50px;
+    left: 280px;
+}
+
+#totime {
+    width: 270px;
+    position: fixed;
+    top: 20px;
+    left: 520px;
+}
+
+#tobutton {
+    background-image: url(ok\ \(1\).png);
+    background-size: cover;
+    position: fixed;
+    left: 540px;
+    border: 0;
+    background-color: rgba(240, 248, 255, 0);
+    width: 200px;
+    height: 180px;
+    position: fixed;
+    top: 450px;
+    font-family: Chewy;
+    font-size: 100px;
+    color: white;
+}
+/* this is the end of time out page ============================================================================== */
